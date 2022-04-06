@@ -201,6 +201,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		
 	}
 }
+void blinkled(void)
+{
+  HAL_GPIO_WritePin(GPIOA,GPIO_PIN11,HIGH);
+  HAL_Delay(1000);
+  HAL_GPIO_WritePin(GPIOA,GPIO_PIN11,LOW);
+}
 int main(void)
 {
   uint8_t len;	
